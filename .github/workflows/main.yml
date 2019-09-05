@@ -10,7 +10,9 @@ jobs:
     - name: Create PDF
       uses: docker://vvakame/review:3.1
       with:
-        args: ./setup.sh && npm run pdf
+        args:
+        - ./setup.sh
+        - npm run pdf
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
